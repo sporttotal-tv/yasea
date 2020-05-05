@@ -160,6 +160,10 @@ public class SrsPublisher {
         stopCamera();
         mEncoder.stop();
     }
+
+    public boolean isRunning() {
+        return mEncoder.isEncoderRunning();
+    }
     public void pauseEncode(){
         stopAudio();
         mCameraView.disableEncoding();

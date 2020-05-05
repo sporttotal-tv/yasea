@@ -179,6 +179,10 @@ public class SrsEncoder {
         mPresentTimeUs = mPresentTimeUs + resumeTime;
         mPausetime = 0;
     }
+
+    public boolean isEncoderRunning() {
+        return vencoder != null;
+    }
     public void stop() {
         if (useSoftEncoder) {
             closeSoftEncoder();
