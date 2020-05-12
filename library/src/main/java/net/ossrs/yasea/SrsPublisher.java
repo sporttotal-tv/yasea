@@ -157,7 +157,6 @@ public class SrsPublisher {
 
     public void stopEncode() {
         stopAudio();
-        stopCamera();
         mEncoder.stop();
     }
 
