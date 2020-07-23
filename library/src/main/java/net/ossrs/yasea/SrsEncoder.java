@@ -361,6 +361,9 @@ public class SrsEncoder {
     }
 
     public void onGetPcmFrame(byte[] data, int size) {
+        if(aencoder == null) {
+            return;
+        }
         // Check video frame cache number to judge the networking situation.
         // Just cache GOP / FPS seconds data according to latency.
         AtomicInteger videoFrameCacheNumber = flvMuxer.getVideoFrameCacheNumber();
